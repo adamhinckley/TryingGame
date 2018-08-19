@@ -41,7 +41,7 @@ const words = [
   'fun',
   'billion',
   'park',
-  'superman',
+  'Superman',
   'quacky',
   'juggler',
   'word',
@@ -65,7 +65,12 @@ const words = [
   'bank',
   'chord',
   'lettuce',
-  'color'
+  'color',
+  'Batman',
+  'lego',
+  'butkin',
+  'sugar',
+  
 ];
 
 //Initialize game
