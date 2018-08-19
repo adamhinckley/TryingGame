@@ -68,8 +68,7 @@ const words = [
   'color',
   'Batman',
   'lego',
-  'butkin',
-  'sugar',
+  'sugar'
 
 ];
 
