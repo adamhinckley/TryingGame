@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #a8a8a8;
+}
+
+.header {
+  background-color: #5a5a5e;
+  display: flex;
+  justify-content: center;
+  height:  70px;
+  align-items: center;
+}
+
+.btnSpacing {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#seconds {
+  color: rgba(248, 2, 2, 0.753);
+  font-weight: bold
+}
