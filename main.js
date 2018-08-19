@@ -9,6 +9,7 @@ const levels = {
 
 
 let currentLevel = levels.easy;
+const newWord = '';
 
     
 document.querySelector('#easyBtn').addEventListener('click', function () {
@@ -128,7 +129,7 @@ function countdown() {
   if(time > 0) {
     time--;
   }else if(time === 0) {
-      isPaying = false;
+      isPlaying = false;
     }
     timeDisplay.innerHTML = time;
   }
@@ -139,8 +140,10 @@ function countdown() {
       score = -1;
     }
   }
-  
+  // set current level to button clicked
   function setCurrentLevel(level) {
     currentLevel = level;
-    init();
+    seconds.innerHTML = currentLevel;
   }
+
+  // add word to words array
