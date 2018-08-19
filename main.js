@@ -8,7 +8,7 @@ const levels = {
 }
 
 
-let currentLevel = levels.hard
+let currentLevel = levels.easy;
 
     
 document.querySelector('#easyBtn').addEventListener('click', function () {
@@ -70,7 +70,7 @@ const words = [
   'lego',
   'butkin',
   'sugar',
-  
+
 ];
 
 //Initialize game
@@ -84,7 +84,7 @@ function init() {
   //call countdown every second
   setInterval(countdown, 1000);
   //check game status
-  setInterval(checStatus, 50);
+  setInterval(checStatus, 100);
 }
 
 //start match
