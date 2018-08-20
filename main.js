@@ -4,26 +4,11 @@ window.addEventListener('load', init);
 const levels = {
   easy: 5,
   medium: 3,
-  hard: 2
+  hard: 2,
+  practice: 9999
 }
-
-
 let currentLevel = levels.easy;
-const newWord = '';
-
-    
-document.querySelector('#easyBtn').addEventListener('click', function () {
-  setCurrentLevel(levels.easy)
-})
-
-document.querySelector('#mediumBtn').addEventListener('click', function() {
-  setCurrentLevel(levels.medium)
-})
-
-document.querySelector('#hardBtn').addEventListener('click', function() {
-  setCurrentLevel(levels.hard)
-})
-
+const newWordField = '';
 let time = currentLevel;
 let score = 0;
 let isPlaying;
@@ -35,6 +20,9 @@ const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
+const addWord = document.querySelector('#addWord');
+const addWordMessage = document.querySelector('#addWordMessage');
+const mode = document.querySelector('#mode');
 
 const words = [
   'hat',
@@ -134,16 +122,50 @@ function countdown() {
     timeDisplay.innerHTML = time;
   }
 
-  function checStatus() {
-    if (!isPlaying === false && time === 0) {
-      message.innerHTML = 'Game Over!!!';
-      score = -1;
-    }
+function checStatus() {
+  if (!isPlaying === false && time === 0) {
+    message.innerHTML = 'Game Over!!!';
+    score = -1;
   }
-  // set current level to button clicked
-  function setCurrentLevel(level) {
-    currentLevel = level;
-    seconds.innerHTML = currentLevel;
-  }
+}
+// set current level to button clicked
+function setCurrentLevel(level) {
+  currentLevel = level;
+  seconds.innerHTML = currentLevel;
+}
+document.querySelector('#easyBtn').addEventListener('click', function () {
+  setCurrentLevel(levels.easy)
+  mode.innerHTML = '5 seconds per word'
+})
 
-  // add word to words array
+document.querySelector('#mediumBtn').addEventListener('click', function() {
+  setCurrentLevel(levels.medium)
+  mode.innerHTML = '3 seconds per word'
+})
+
+document.querySelector('#hardBtn').addEventListener('click', function() {
+  setCurrentLevel(levels.hard)
+  mode.innerHTML = '2 seconds per word'
+})
+
+document.querySelector('#practiceBtn').addEventListener('click', function() {
+  setCurrentLevel(levels.practice)
+   mode.innerHTML = "practice mode"
+})
+
+// add word to words array
+
+document.querySelector('#addBtn').addEventListener('click', function() {
+  if (addWord.value !== ''){
+    words.push(addWord.value);
+    console.log(words);
+    addWordMessage.innerHTML = 'added ' + addWord.value;
+    clearField(addWord.value);
+  } else {
+    addWordMessage.innerHTML = 'add a word';
+  }
+})
+
+function clearField () {
+  document.querySelector('#addWord').value = '';
+}

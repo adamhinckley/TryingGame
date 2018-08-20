@@ -19,10 +19,9 @@
 .btnSpacing {
   display: flex;
   justify-content: space-around;
-  align-content: center;
 }
 
-#seconds {
-  color: rgba(248, 2, 2, 0.753);
+.modeDisplay {
+  color: rgb(60, 60, 247);
   font-weight: bold
 }
