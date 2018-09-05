@@ -1,2 +1,2 @@
 WordRace is a project a made for my kids to practice their typing skills with the help of Traversy Media on YouTube
-I added the buttons at the top and the option to add words to the game.
+<br>I added the buttons at the top and the option to add words to the game.
